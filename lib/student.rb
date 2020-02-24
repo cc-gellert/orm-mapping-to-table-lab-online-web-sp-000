@@ -34,7 +34,8 @@ class Student
     INSERT INTO students (name, grade)
     VALUES (?, ?)
     SQL
-    DB[:conn].execute(sql, self.name, self.grade)
+    new_row = DB[:conn].execute(sql, self.name, self.grade)
+    new_row
   end 
   
   def self.create(attr_hash)
