@@ -37,6 +37,7 @@ class Student
     VALUES (?, ?)
     SQL
     new_row = DB[:conn].execute(sql, self.name, self.grade)
+    binding.pry
   end 
   
   def self.create(attr_hash)
