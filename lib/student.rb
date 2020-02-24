@@ -41,7 +41,7 @@ class Student
   end 
   
   def self.create(attr_hash)
-    attr_hash.each {|key, value| self.send(("#{key}="), value)}
+    attr_hash.each {|key, value| send(("#{key}="), value)}
     new_student = Student.new(name, grade)
     new_student.save 
     new_student 
