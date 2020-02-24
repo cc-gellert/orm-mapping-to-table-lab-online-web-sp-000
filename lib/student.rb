@@ -37,7 +37,7 @@ class Student
     VALUES (?, ?)
     SQL
     DB[:conn].execute(sql, self.name, self.grade)
-    binding.pry
+    self 
   end 
   
   def self.create(attr_hash)
